@@ -2,7 +2,7 @@ Summary:	Building Interfaces the easy way
 Summary(pl):	Tworzenie interfejsów w ³atwy sposób
 Name:		gazpacho
 Version:	0.6.2
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Development/Building
 Source0:	http://ftp.acc.umu.se/pub/GNOME/sources/gazpacho/0.6/%{name}-%{version}.tar.bz2
@@ -71,7 +71,7 @@ umask 022
 %postun
 if [ $1 = 0]; then
     umask 022
-    [ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2
+    [ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1
 fi
 
 %files -f %{name}.lang
