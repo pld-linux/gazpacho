@@ -1,0 +1,21 @@
+diff -aurN gazpacho-0.6.2.orig/gazpacho.desktop gazpacho-0.6.2/gazpacho.desktop
+--- gazpacho-0.6.2.orig/gazpacho.desktop	2005-07-26 18:37:51.000000000 +0200
++++ gazpacho-0.6.2/gazpacho.desktop	2005-10-26 10:00:36.000000000 +0200
+@@ -1,14 +1,14 @@
+ [Desktop Entry]
+ Name=Gazpacho Interface Designer
+ Comment=Design Graphical User Interfaces
+-Icon=/usr/share/gazpacho/pixmaps/gazpacho-icon.png
+-Exec=/usr/bin/gazpacho %F
++Icon=gazpacho.png
++Exec=gazpacho %F
+ Terminal=false
+ Type=Application
+ Version=0.9.4
+ MimeType=application/x-glade
+ Encoding=UTF-8
+-Categories=Application;Development;GUIDesigner
++Categories=GTK;Development;GUIDesigner
+ Name[es]=Diseñador de Interfaces Gazpacho
+ Comment[es]=Diseñar interfaces gráficas de usuario
+ Name[es_ES]=Diseñador de Interfaces Gazpacho
