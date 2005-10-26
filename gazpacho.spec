@@ -2,11 +2,12 @@ Summary:	Building Interfaces the easy way
 Summary(pl):	Tworzenie interfejsów w ³atwy sposób
 Name:		gazpacho
 Version:	0.6.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Building
 Source0:	http://ftp.acc.umu.se/pub/GNOME/sources/gazpacho/0.6/%{name}-%{version}.tar.bz2
 # Source0-md5:	64311aa9688c456838903b3777703981
+Patch0:		%{name}-desktop.patch
 URL:		http://gazpacho.sicem.biz/
 BuildRequires:	python-devel
 Requires:	python-pygtk-gtk >= 1:2.6.0
@@ -32,6 +33,7 @@ wci±¿ nie wspieranych przez libglade.
 
 %prep
 %setup -q
+%patch0 -p1
 
 sed -i	-e "s/from gazpacho import application//" \
 	-e "s/application.__version__/'%{version}'/" \
@@ -44,7 +46,7 @@ python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_pixmapsdir}}
 
 python setup.py install \
 	--optimize=2 \
@@ -52,12 +54,23 @@ python setup.py install \
 
 find $RPM_BUILD_ROOT%{py_sitescriptdir}/gazpacho -name '*.py' -exec rm -f {} \;
 
+rm -rf $RPM_BUILD_ROOT%{_docdir}/%{name}
+
 %find_lang %{name}
 
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+install pixmaps/gazpacho-icon.png $RPM_BUILD_ROOT%{_pixmapsdir}/gazpacho.png
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+umask 022
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
+
+%postun
+umask 022
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -68,3 +81,4 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/gazpacho
 %{_desktopdir}/*
 %{_examplesdir}/%{name}-%{version}
+%{_pixmapsdir}/*.png
