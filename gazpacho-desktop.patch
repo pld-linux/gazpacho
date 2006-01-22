@@ -1,7 +1,7 @@
 diff -aurN gazpacho-0.6.3.orig/gazpacho.desktop gazpacho-0.6.3/gazpacho.desktop
 --- gazpacho-0.6.3.orig/gazpacho.desktop	2006-01-05 15:24:15.000000000 +0100
 +++ gazpacho-0.6.3/gazpacho.desktop	2006-01-06 23:07:21.000000000 +0100
-@@ -1,14 +1,14 @@
+@@ -1,21 +1,19 @@
  [Desktop Entry]
  Name=Gazpacho Interface Designer
  Comment=Design Graphical User Interfaces
@@ -15,7 +15,20 @@ diff -aurN gazpacho-0.6.3.orig/gazpacho.desktop gazpacho-0.6.3/gazpacho.desktop
  MimeType=application/x-glade
  Encoding=UTF-8
 -Categories=Application;Development;GUIDesigner;
-+Categories=GTK;Development;GUIDesigner
++Categories=GTK;Development;GUIDesigner;
  Name[es]=Diseñador de Interfaces Gazpacho
  Comment[es]=Diseñar interfaces gráficas de usuario
- Name[es_ES]=Diseñador de Interfaces Gazpacho
+-Name[es_ES]=Diseñador de Interfaces Gazpacho
+-Comment[es_ES]=Diseñar interfaces gráficas de usuario
+-Name[gl_ES]=Deseñador de Interfaces Gazpacho
+-Comment[gl_ES]=Deseñar interfaces gráficas de usuario
+-Name[fr_FR]=Générateur d'interface utilisateur Gazpacho
+-Comment[fr_FR]=Générer des interfaces utilisateur
++Name[gl]=Deseñador de Interfaces Gazpacho
++Comment[gl]=Deseñar interfaces gráficas de usuario
++Name[fr]=Générateur d'interface utilisateur Gazpacho
++Comment[fr]=Générer des interfaces utilisateur
+ Name[pt_BR]=Construtor de Interfaces para Usuário
+ Comment[pt_BR]=Projetar Interfaces Gráficas para Usuários
++Name[pl]=Projektant interfejsów Gazpacho
++Comment[pl]=Projektowanie graficznych interfejsów użytkownika
