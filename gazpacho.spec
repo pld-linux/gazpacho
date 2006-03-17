@@ -1,12 +1,12 @@
 Summary:	Building Interfaces the easy way
 Summary(pl):	Tworzenie interfejsów w ³atwy sposób
 Name:		gazpacho
-Version:	0.6.4
-Release:	2
+Version:	0.6.5
+Release:	1
 License:	LGPL
 Group:		Development/Building
 Source0:	http://ftp.acc.umu.se/pub/GNOME/sources/gazpacho/0.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	2c7f482ead7f7fb304d92262f686a124
+# Source0-md5:	853d2df3bcf3205848e695177bdba6a8
 Patch0:		%{name}-desktop.patch
 URL:		http://gazpacho.sicem.biz/
 BuildRequires:	python-devel
