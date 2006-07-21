@@ -10,6 +10,7 @@ Source0:	http://ftp.acc.umu.se/pub/GNOME/sources/gazpacho/0.6/%{name}-%{version}
 Patch0:		%{name}-desktop.patch
 URL:		http://gazpacho.sicem.biz/
 BuildRequires:	python-devel
+BuildRequires:	sed >= 4.0
 Requires:	python-pygtk-gtk >= 1:2.6.0
 %pyrequires_eq	python-modules
 BuildArch:	noarch
