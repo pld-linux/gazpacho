@@ -82,6 +82,6 @@ fi
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/gazpacho
 %{py_sitescriptdir}/gazpacho
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_examplesdir}/%{name}-%{version}
 %{_pixmapsdir}/*.png
