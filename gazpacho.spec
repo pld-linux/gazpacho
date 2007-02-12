@@ -1,5 +1,5 @@
 Summary:	Building Interfaces the easy way
-Summary(pl):	Tworzenie interfejsów w ³atwy sposób
+Summary(pl.UTF-8):   Tworzenie interfejsÃ³w w Å‚atwy sposÃ³b
 Name:		gazpacho
 Version:	0.6.5
 Release:	1
@@ -25,12 +25,12 @@ but now it is more complete and featured than its ancestor. It tries
 to be compatible with libglade but it can handle some widgets that
 still lack support in libglade.
 
-%description -l pl
-Ten program pozwala tworzyæ graficzny interfejs u¿ytkownika (GUI) dla
-programów GTK+ w sposób wizualny. Z pocz±tku by³ klonem Glade-3, ale w
+%description -l pl.UTF-8
+Ten program pozwala tworzyÄ‡ graficzny interfejs uÅ¼ytkownika (GUI) dla
+programÃ³w GTK+ w sposÃ³b wizualny. Z poczÄ…tku byÅ‚ klonem Glade-3, ale w
 chwili obecnej jest bardziej zaawansowany od swojego przodka. Gazpacho
-stara siê byæ kompatybilnym z libglade, choæ zawiera kilka kontrolek
-wci±¿ nie wspieranych przez libglade.
+stara siÄ™ byÄ‡ kompatybilnym z libglade, choÄ‡ zawiera kilka kontrolek
+wciÄ…Å¼ nie wspieranych przez libglade.
 
 %prep
 %setup -q
