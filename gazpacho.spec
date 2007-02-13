@@ -1,5 +1,5 @@
 Summary:	Building Interfaces the easy way
-Summary(pl.UTF-8):   Tworzenie interfejsów w łatwy sposób
+Summary(pl.UTF-8):	Tworzenie interfejsów w łatwy sposób
 Name:		gazpacho
 Version:	0.6.5
 Release:	1
