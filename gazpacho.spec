@@ -1,12 +1,12 @@
 Summary:	Building Interfaces the easy way
 Summary(pl.UTF-8):	Tworzenie interfejsów w łatwy sposób
 Name:		gazpacho
-Version:	0.6.5
-Release:	1
+Version:	0.7.1
+Release:	0.1
 License:	LGPL
 Group:		Development/Building
-Source0:	http://ftp.acc.umu.se/pub/GNOME/sources/gazpacho/0.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	853d2df3bcf3205848e695177bdba6a8
+Source0:	http://ftp.acc.umu.se/pub/GNOME/sources/gazpacho/0.7/%{name}-%{version}.tar.bz2
+# Source0-md5:	cf9f14b518fe3e4617f25b9393dc95a9
 Patch0:		%{name}-desktop.patch
 URL:		http://gazpacho.sicem.biz/
 BuildRequires:	python-devel
@@ -34,22 +34,22 @@ wciąż nie wspieranych przez libglade.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 sed -i	-e "s/from gazpacho import application//" \
 	-e "s/application.__version__/'%{version}'/" \
 	setup.py
 
-sed -i	-e "s@return self._variables\['docs_dir'\]\[0\]@return '/usr/share/doc/%{name}-%{version}/'@" gazpacho/environ.py
+#sed -i	-e "s@return self._variables\['docs_dir'\]\[0\]@return '/usr/share/doc/%{name}-%{version}/'@" gazpacho/environ.py
 
 %build
-python setup.py build
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_pixmapsdir}}
 
-python setup.py install \
+%{__python} setup.py install \
 	--optimize=2 \
 	--root $RPM_BUILD_ROOT
 
