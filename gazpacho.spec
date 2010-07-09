@@ -2,7 +2,7 @@ Summary:	Building Interfaces the easy way
 Summary(pl.UTF-8):	Tworzenie interfejsów w łatwy sposób
 Name:		gazpacho
 Version:	0.7.2
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Development/Building
 Source0:	http://ftp.acc.umu.se/pub/GNOME/sources/gazpacho/0.7/%{name}-%{version}.tar.bz2
