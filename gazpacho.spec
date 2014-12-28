@@ -9,7 +9,7 @@ Source0:	http://ftp.acc.umu.se/pub/GNOME/sources/gazpacho/0.7/%{name}-%{version}
 # Source0-md5:	ca9c3c308a63194e6dcec3c932c98fbc
 Patch0:		%{name}-desktop.patch
 URL:		http://gazpacho.sicem.biz/
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	sed >= 4.0
