@@ -46,14 +46,13 @@ sed -i	-e "s/from gazpacho import application//" \
 #sed -i	-e "s@return self._variables\['docs_dir'\]\[0\]@return '/usr/share/doc/%{name}-%{version}/'@" gazpacho/environ.py
 
 %build
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_pixmapsdir}}
 
-%{__python} setup.py install \
-	--optimize=2 \
+%py_install \
 	--root $RPM_BUILD_ROOT
 
 find $RPM_BUILD_ROOT%{py_sitescriptdir}/gazpacho -name '*.py' -exec rm -f {} \;
